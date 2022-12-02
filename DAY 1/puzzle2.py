@@ -1,5 +1,5 @@
 # open the file
-file = open("input_puzzle2.txt", "r")
+file = open("input.txt", "r")
 
 # initialize the sum and the greatest sums
 sum = 0
