@@ -1,4 +1,4 @@
 # aoc2022
-Advent of Code 2002
+My solutions for Advent of Code 2022🎄
 
 
