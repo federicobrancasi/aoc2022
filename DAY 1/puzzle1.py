@@ -1,27 +1,29 @@
 # open the file
 file = open("input.txt", "r")
 
-# initialize the sum and the greatest sum
-sum = 0
-greatest_sum = 0
+# create a list of the lines (calories) in the file
+numbers = file.read().splitlines()
+# initialize the current sum
+current_sum = 0
+# initialize the array of the sums
+sums = []
 
-# read the file line by line
-for line in file:
-    # if the line is not blank
-    if line != "\n":
-        # add the number to the sum
-        sum += int(line)
-    # if the line is blank
+# for each number in the list of numbers
+for number in numbers:
+    # add the number to the current sum if it is not blank
+    if number != '':
+        current_sum += int(number)
+    # if the number is blank append the current sum to the array of sums
     else:
-        # if the sum is greater than the greatest sum
-        if sum > greatest_sum:
-            # update the greatest sum
-            greatest_sum = sum
-        # reset the sum
-        sum = 0
+        sums.append(current_sum)
+        current_sum = 0
+
+# sort the array of sums
+sums.sort()
 
 # print the greatest sum
-print(greatest_sum)
+print(sums[-1])
 
 # close the file
 file.close()
+
