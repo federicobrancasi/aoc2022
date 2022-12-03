@@ -13,7 +13,7 @@ priority_sum = 0
 
 # open the file
 with open('input.txt') as f:
-    # read the lines
+    # read the lines of the file
     lines = f.readlines()
 
     # read 3 lines at a time (they identify a group)
