@@ -53,7 +53,6 @@ def simulate_movement(moves):
             move(positions, direction)
 
             if DEBUG:
-                print("zipped: ", list(zip(positions, positions[1:])))
                 print("positions after: ", positions, " pos[1:]", positions[1:])
 
             # for every pair of positions (previous and next element / head and tail)
@@ -108,7 +107,8 @@ def simulate_movement(moves):
             if DEBUG:
                 print("\n")
 
-    # add the position of the element / tail (last element of the positions)
+    # add the position of the tail (last element of the positions)
+    # to the set of visited positions
     visited.add(tuple(positions[-1]))
 
     # return the number of visited positions
