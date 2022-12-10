@@ -49,9 +49,9 @@ for instruction in commands:
         # add '#' to the image if the cycle is present in the sprite or ' ' otherwise
         if DEBUG:
             print("cycle", cycle, " sprite:", value - 1, value, value + 1,
-                  " is present? ", (cycle) % 40 in (value - 1, value, value + 1))
+                  " is present? ", cycle % 40 in (value - 1, value, value + 1))
 
-        if (cycle) % 40 in (value - 1, value, value + 1):
+        if cycle % 40 in (value - 1, value, value + 1):
             image += "#"
         else:
             image += " "
